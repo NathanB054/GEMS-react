@@ -9,5 +9,9 @@ export default defineConfig({
       plugins: [tailwindcss()],
     },
   },
-
+  resolve: {
+    alias: {
+      'react-native': 'react-native-web',
+    },
+  },
 })

@@ -1,16 +1,17 @@
 import './App.sass'
-
+import './components/login/page'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Login from './components/login/page';
+import Map from './components/map/page';
 function App() {
 
   return (
-    <>
-    <p className="text-3xl font-bold underline text-red-500">
-      Hello world!
-    </p>
-    <h1>
-      test
-    </h1>
-    </>
+   <BrowserRouter>
+   <Routes>
+      <Route path='/' element={<Login/>}></Route>
+      <Route path='/map' element={<Map/>}></Route>
+   </Routes>
+   </BrowserRouter>
   )
 }
 
