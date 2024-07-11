@@ -12,7 +12,6 @@ export const sencodetobackend = async (code: string) => {
       },
       { headers: { "Access-Control-Allow-Origin": "*" } }
     );
-    // console.log("Backend response:", response.data);
     return response.data;
   } catch (error) {
     console.error("Failed to send code to backend:", error);
