@@ -32,6 +32,9 @@ export const getUserinfo = async function (token?:string) {
             name: string;
             role: string;
         }>(response.data);
+        console.log(user);
+        
+        
         return user;
     } catch (error) {
         console.error(error);

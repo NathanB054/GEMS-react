@@ -46,7 +46,7 @@ const ProtectmapRoute: React.FC<ProtectRouteProps> = ({ children, requireRoles =
     return <Navigate to="/" replace />;
   }
 
-  if (!userRole) {
+  if (!userRole || !userRole.role) {
     return <Navigate to="/" replace />;
   }
 
