@@ -1,9 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
+import MapComponant from './mapComponent';
 
 
-const Map = ()=>{
+
+const Mappage = ()=>{
     const [cookies, setCookie] = useCookies(['token']);
     const navigate = useNavigate();
     const handleSignout = () => {
@@ -14,11 +16,10 @@ const Map = ()=>{
           navigate('/', { replace: true });
         }
       };
+ 
 
-    return <>Map
-    <div className=" bg-red-600 rounded-full w-16 h-7 text-center text-white" onClick={handleSignout} >
-        signout
-    </div>
+    return <>
+    <MapComponant/>
     </>
 }
-export default Map;
+export default Mappage;
