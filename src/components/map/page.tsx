@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import MapComponant from './mapComponent';
+import Navbar from '../navbar/navbar';
 
 
 
@@ -19,6 +20,7 @@ const Mappage = ()=>{
  
 
     return <>
+    <Navbar/>
     <MapComponant/>
     </>
 }
