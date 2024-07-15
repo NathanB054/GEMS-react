@@ -1,4 +1,22 @@
 @import '../../App'
-
+$animationlogoTime: 1.75s
+$animationcontentTime: 1.75s
 .navbar
-    background-color: $primarycolor
+  transition: $animationcontentTime
+  background-color: $primarycolor
+
+  &.navbar-close
+    right: 40%
+    left:  40%
+    transition: $animationcontentTime
+    .navbar-wrapper
+      padding: 0
+      transition: $animationcontentTime
+      // justify-content: center
+    .content
+      transition: $animationcontentTime
+      opacity: 0
+      display: none
+    .logo
+      transition: $animationlogoTime
+      transform: rotate(720deg)
